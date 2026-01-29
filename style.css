@@ -1,0 +1,287 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    padding: 40px;
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+    margin-bottom: 10px;
+    font-size: 2.5em;
+}
+
+h2 {
+    color: #555;
+    margin-top: 30px;
+    margin-bottom: 20px;
+    font-size: 1.5em;
+    border-bottom: 3px solid #667eea;
+    padding-bottom: 10px;
+}
+
+.main-content {
+    display: flex;
+    gap: 30px;
+    margin-bottom: 30px;
+}
+
+/* 폼 스타일 */
+.form-section {
+    flex: 0 0 350px;
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 6px;
+    color: #555;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 10px;
+    border: 2px solid #ddd;
+    border-radius: 6px;
+    font-size: 0.95em;
+    transition: border-color 0.3s;
+}
+
+input[type="text"]:focus,
+select:focus {
+    outline: none;
+    border-color: #667eea;
+    background-color: #f0f4ff;
+}
+
+.btn-add {
+    width: 100%;
+    padding: 12px;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1em;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    margin-top: 10px;
+}
+
+.btn-add:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 25px rgba(102, 126, 234, 0.4);
+}
+
+.btn-add:active {
+    transform: translateY(0);
+}
+
+/* 시간표 스타일 */
+.schedule-section {
+    flex: 1;
+}
+
+.schedule-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border: 2px solid #333;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+.schedule-table thead {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+}
+
+.schedule-table th {
+    padding: 15px 12px;
+    text-align: center;
+    border-right: 2px solid #555;
+    border-bottom: 3px solid #333;
+    font-weight: 600;
+    font-size: 0.95em;
+}
+
+.schedule-table th:last-child {
+    border-right: none;
+}
+
+.schedule-table td {
+    padding: 12px;
+    text-align: center;
+    border-right: 2px solid #ccc;
+    border-bottom: 2px solid #ccc;
+    font-size: 0.85em;
+    min-height: 50px;
+    vertical-align: middle;
+}
+
+.schedule-table td:last-child {
+    border-right: none;
+}
+
+.schedule-table tbody tr:last-child td {
+    border-bottom: 2px solid #333;
+}
+
+.time-column {
+    font-weight: 600;
+    background: #e9ecef;
+    border-right: 3px solid #333 !important;
+}
+
+.schedule-cell {
+    background: white;
+    position: relative;
+}
+
+.time-slot {
+    background: #e7f0ff;
+    border: 1px solid #667eea;
+    border-radius: 4px;
+    padding: 8px;
+    margin: 2px;
+    font-size: 0.8em;
+    color: #333;
+    word-break: break-word;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.time-slot-with-course {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: 2px solid #555;
+    font-weight: 600;
+    box-shadow: 0 2px 6px rgba(102, 126, 234, 0.3);
+}
+
+.time-slot-with-course small {
+    display: block;
+    font-size: 0.75em;
+    margin-top: 3px;
+    opacity: 0.9;
+}
+
+/* 강의 목록 스타일 */
+.course-list-section {
+    background: #f8f9fa;
+    padding: 25px;
+    border-radius: 10px;
+    border: 2px solid #e9ecef;
+}
+
+.course-list {
+    list-style: none;
+}
+
+.course-item {
+    background: white;
+    padding: 15px;
+    margin-bottom: 10px;
+    border-left: 5px solid #667eea;
+    border-radius: 6px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.course-item:hover {
+    transform: translateX(5px);
+    box-shadow: 0 4px 12px rgba(102, 126, 234, 0.2);
+}
+
+.course-info {
+    flex: 1;
+}
+
+.course-name {
+    font-weight: 600;
+    color: #333;
+    margin-bottom: 5px;
+    font-size: 1.05em;
+}
+
+.course-details {
+    font-size: 0.85em;
+    color: #666;
+}
+
+.btn-delete {
+    padding: 8px 15px;
+    background: #ff6b6b;
+    color: white;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.85em;
+    font-weight: 600;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.btn-delete:hover {
+    background: #ff5252;
+    transform: scale(1.05);
+}
+
+.btn-delete:active {
+    transform: scale(0.95);
+}
+
+/* 빈 상태 */
+.empty-message {
+    text-align: center;
+    color: #999;
+    padding: 20px;
+    font-size: 0.95em;
+}
+
+/* 반응형 디자인 */
+@media (max-width: 768px) {
+    .main-content {
+        flex-direction: column;
+    }
+    
+    .form-section {
+        flex: 1;
+    }
+    
+    h1 {
+        font-size: 1.8em;
+    }
+    
+    .container {
+        padding: 20px;
+    }
+}
